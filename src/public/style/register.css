@@ -1,0 +1,205 @@
+.register-title {
+      margin-bottom: 35px;
+      text-align: center;
+}
+
+.register-title > p:nth-child(1) {
+      margin-bottom: 15px;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--text-black);
+}
+
+.register-title > p:nth-child(2) {
+      font-size: 16px;
+      font-weight: 100;
+      color: #999;
+} 
+
+/* register step */
+.register-step {
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 45px;
+}
+
+.register-step > div:nth-of-type(1) {
+      width: 70px;
+      height: 70px;
+      background-position: -140px -70px;
+      background-image: url('/image/register-stepIcon.png');
+      background-repeat: no-repeat;
+}
+
+.register-step > div:nth-of-type(2) {
+      width: 70px;
+      height: 70px;
+      background-position: -210px 0px;
+      background-image: url('/image/register-stepIcon.png');
+      background-repeat: no-repeat;
+}
+
+.register-step > span {
+      margin: 22px;
+      font-size: 55px;
+      color: var(--point-color);
+}
+
+section#register {
+      width: 100%;
+      height: fit-content;
+      padding: 100px 0;
+      background-color: var(--mobile-main-bg);
+}
+
+.registerForm {
+      width: 1170px;
+      height: fit-content;
+      margin: auto;
+      position: relative;
+}
+
+.registerFormTxt {
+      width: 1170px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 40px;
+      background-color: #58006c;
+      font-size: 24px;
+      line-height: 70px;
+}
+
+.registerFormTxt strong {
+      color: var(--white-color);
+}
+
+.registerFormTxt p {
+      color: var(--point-color);
+      text-indent: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+}
+
+.register-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 130px;
+      padding-bottom: 55px;
+      background-color: var(--white-color);
+      box-shadow: #0000001a 0px 1px 2px 0px;
+      border-radius: 40px 0 40px 0;
+}
+
+.register-container {
+      width: 600px;
+}
+
+.register-contents > div {
+      margin-bottom: 40px;
+}
+
+.register-contents > div:last-child {
+      margin-bottom: 50px;
+}
+
+.register-contents form {
+      position: relative;
+}
+
+.register-contents label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-gray);
+      cursor: pointer;
+}
+
+.register-contents label:hover {
+      color: var(--primary-color);
+}
+
+.register-contents label.valid,
+.register-contents label.active {
+      color: var(--primary-color);
+}
+
+.register-contents label.invalid {
+      color: crimson;
+}
+
+.register-contents input {
+      width: 100%;
+      display: block;
+      padding: 15px 20px;
+      margin-bottom: 8px;
+      border-radius: 0;
+      border: 1px solid #e5e5e5;
+      outline: none;
+}
+
+.register-contents input.valid,
+.register-contents input.active {
+      border: 1px solid var(--primary-color);
+}
+
+.register-contents input.invalid {
+      border: 1px solid crimson;
+}
+
+.register-contents input::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+      color: #66666650;
+}
+
+.userErr, .userAlert {
+      font-size: 15.5px;
+      color: crimson;
+      line-height: 22px;
+      display: none;
+}
+
+.show-pw {
+      position: absolute;
+      bottom: 12px;
+      right: 25px;
+      width: 22px;
+      height: 22px;
+      background-image: url('/image/show_off.png');
+      background-size: cover;
+      cursor: pointer;
+}
+
+.show-pw.activePw {
+      background-image: url('/image/show_on.png');
+      transition: 0.2s;
+}
+
+
+#registerBtn {
+      width: 300px;
+      height: 50px;
+      display: block;
+      margin: auto;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border: none;
+      color: var(--white-color);
+      background-color: var(--primary-color);
+}
+
+#registerBtn:hover {
+      background-color: #008820;
+      transition: 0.3s;
+      cursor: pointer;
+}

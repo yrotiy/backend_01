@@ -48,5 +48,4 @@ $(document).on('click', function(event){
             loginInput.parent().parent().removeClass('active');
             $('.login-form label').removeClass('active');
       }
-
 })
