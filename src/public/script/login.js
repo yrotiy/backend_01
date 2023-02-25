@@ -8,7 +8,6 @@ console.log(userId, userPw, loginBtn);
 loginBtn.addEventListener('click', login);
 
 function login(){
-      // console.log(userId.value, userPw.value);
       const req = {
             id : userId.value,
             pw : userPw.value
@@ -21,8 +20,7 @@ function login(){
             },
             // 문자열로 변환하기
             body : JSON.stringify(req)
-      })
-      // console.log(req);
+      }).then((res) => res.json()).then((res)=>console.log(res));
 }
 
 // form event
