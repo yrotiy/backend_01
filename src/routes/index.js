@@ -18,6 +18,7 @@ const {index, login, register, searchId, searchPwd} = require('../controller/ind
 
 router.get('/', index);
 router.get('/login', login);
+// router.posts('/login', login);
 router.get('/register', register);
 router.get('/searchId', searchId);
 router.get('/searchPwd', searchPwd);

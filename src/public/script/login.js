@@ -14,8 +14,15 @@ function login(){
             pw : userPw.value
       };
 
-      // fetch()
-      console.log(req);
+      fetch('/login', {
+            method : 'POST',
+            headers : {
+                  'Content-Type' : 'application/json'
+            },
+            // 문자열로 변환하기
+            body : JSON.stringify(req)
+      })
+      // console.log(req);
 }
 
 // form event
