@@ -2,8 +2,6 @@ const userId = document.getElementById('userId');
 const userPw = document.getElementById('userPw');
 const loginBtn = document.getElementById('loginBtn');
 
-console.log(userId, userPw, loginBtn);
-
 
 loginBtn.addEventListener('click', login);
 
@@ -30,9 +28,9 @@ function login(){
                   alert(res.message);
             }
       })
-      .catch((err) => {
-            console.error('로그인 중 에러가 발생했습니다.');
-      })
+      // .catch((err) => {
+      //       console.error('로그인 중 에러가 발생했습니다.');
+      // })
 }
 
 // form event
