@@ -18,6 +18,19 @@ class userData {
             }, {});
             return newUsers;
       }
+
+      static getUserInfo(id) {
+            const users = this.#users;
+            const idx = users.id.indexOf(id);
+            // #users의 key만 배열로 만듬
+            const usersKeys = Object.keys(users);
+            const userInfo = usersKeys.reduce((newUser, info) => {
+                  newUser[info] = users[info][idx];
+                  return newUser;
+            }, {});
+
+            return userInfo;
+      }
 }
 
 module.exports = userData;
