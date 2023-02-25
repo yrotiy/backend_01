@@ -20,7 +20,19 @@ function login(){
             },
             // 문자열로 변환하기
             body : JSON.stringify(req)
-      }).then((res) => res.json()).then((res)=>console.log(res));
+      }).then((res) => res.json())
+      .then((res) => {
+            if(res.success) {
+                  // 로그인 성공 시, index 페이지로 이동
+                  location.href = '/';
+                  alert(res.message);
+            } else {
+                  alert(res.message);
+            }
+      })
+      .catch((err) => {
+            console.error('로그인 중 에러가 발생했습니다.');
+      })
 }
 
 // form event
