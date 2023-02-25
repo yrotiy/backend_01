@@ -1,0 +1,54 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'S-CoreDream-3Light';
+}
+
+@font-face {
+      font-family: 'S-CoreDream-3Light';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+}
+
+li {
+      list-style: none;
+}
+
+a {
+      all: unset;
+}
+
+:root {
+      --primary-color: #009223;
+      --point-color: #ffce32;
+      --white-color: #fff;
+      --text-black: #292929;
+      --text-gray: #666666;
+      --text-shdw: #2929293f;
+      --gnb-after: #3b3b3ba9;
+      --sbm-slider: #464646c1;
+      --sbm-slider-hv: #1f1f1f;
+      --menumore-shw: #23232330;
+      --menumore-icon-sdw: #23232320;
+      --sb-enjoy: #01a5e2;
+      --sb-history: #ff8300;
+      --sb-news-desc: #464646c1;
+      --sb-newsmore-hv: #121212;
+      --quickmenu-bg: #f6f6f6;
+      --quickmenu-sdw: #26262665;
+      --ft-border: #3b3b3b;
+      --ft-white: #bbbbbb;
+      --mobile-main-bg: #f8f8f8;
+      --mobiletab-txt-2: #929292;
+      --mobiletabs-sdw: #64646f33;
+      --mobiletab-border: #8383833c;
+      --sub-body: #f2f2f2;
+      --sub-hd: #e95b1d;
+      --sublnb-after: #ffffff90;
+      --sdwback-txt-3: #ecdba0;
+}
+
+
+

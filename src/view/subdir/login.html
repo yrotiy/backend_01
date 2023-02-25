@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>로그인</title>
+      <link rel="stylesheet" href="/style/reset.css">
+      <link rel="stylesheet" href="/style/login.css">
+</head>
+<body>
+      <section id="login">
+            <div class="login-wrapper">
+                  <div class="login-container">
+                        <div class="login-title">
+                              <p>LOGIN</p>
+                              <p>써브웨이 회원으로 로그인하시면 제공하는<br>다양한 서비스를 이용할 수 있습니다.</p>
+                        </div>
+                        <div class="login-contents">
+                              <div class="login-form">
+                                    <form class="userId-form" action="">
+                                          <label for="userId">이메일 아이디</label>
+                                          <input type="text" id="userId" placeholder="이메일 아이디 입력" autocomplete="off">
+                                    </form>
+                                    <form class="userPw-form" action="">
+                                          <label for="userPw">비밀번호</label>
+                                          <input type="password" id="userPw" placeholder="비밀번호 입력" autocomplete="off">
+                                    </form>
+                              </div>
+                              <button id="loginBtn">로그인</button>
+                              <div class="login-menu">
+                                    <ul>
+                                          <li><a href="/searchId">아이디 찾기</a></li>
+                                          <li><a href="/searchPw">비밀번호 찾기</a></li>
+                                          <li><a href="/register">회원가입</a></li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <script src="/script/jquery-3.6.1.js"></script>
+      <script src="/script/jquery-ui.js"></script>
+      <script src="/script/login.js"></script>
+</body>
+</html>
