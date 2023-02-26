@@ -19,9 +19,9 @@ const register = (req, res) => {
       res.sendFile(path.join(__dirname, '..' , 'view','subdir','register.html'));
 }
 
-const processRegister = (req, res) => {
+const processRegister = async (req, res) => {
       const user = new User(req.body);
-      const response = user.register();
+      const response = await user.register();
       return res.json(response);
 }
 

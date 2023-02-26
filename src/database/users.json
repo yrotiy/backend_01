@@ -1,7 +1,1 @@
-{
-      "name" : ["홍길동", "은박지", "오징어"],
-      "email" :  ["test01@gmail.com", "test02@naver.com", "test03@hanmail.com"],
-      "phone" : ["01012345678", "0109836283", "024261066"],
-      "id" : ["test01", "test02", "test03"],
-      "pw": ["1234", "5678", "9000"]
-}
+{"name":["홍길동","은박지","오징어","윤정이","김나연","dsss","대추차","dddd","스폰지밥","오렌지","행복이","슬픔이","크림빵","아리랑","누룽지","윤서준"],"email":["test01@gmail.com","test02@naver.com","test03@hanmail.com","jeongyi0113@naver.com","kimkim04@hanmail.com","sddssds","tea0000@naaver.com","dddd","spongee@gmail.com","orange52@daum.com","happy@gmail.com","sadness@naver.com","creambread8@gmail.com","아리랑","noorungi@gmail.com","seojun@gmail.com"],"phone":["01012345678","0109836283","024261066","01058784841","01029110562","ssdd","0102222222","ddd","01026534389","0105656198","01098793409","44343436363","203747782","아리랑","0101111122222","01005232008"],"id":["test01","test02","test03","jeong","nanani","ssss","daedae","ddd","spongee","orange","happy","sad","cream","ari","noorungi","seojun"],"pw":["1234","5678","9000","jeong0113!","nanani14!","sss","0909","ddd","7777","orange52!","happy00@","sad66","bread!","ari!","noorungi!","0523!"]}

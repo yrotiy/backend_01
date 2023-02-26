@@ -14,9 +14,9 @@ class userData {
             return userInfo;
       }
 
-      // 새로운 메서드로 데이터를 넘겨줘야한다.
-      static getUser(...fields){
-            // const users = this.#users;
+      static #getUser(data, isAll, fields){
+            const users = JSON.parse(data);
+            if(isAll) return users;
             const newUsers = fields.reduce((newUsers, field)=>{
                   if(users.hasOwnProperty(field)) {
                         newUsers[field] = users[field];
@@ -24,6 +24,14 @@ class userData {
                   return newUsers;
             }, {});
             return newUsers;
+      }
+
+      static getUser(isAll, ...fields){
+            return fs.readFile('./src/database/users.json')
+            .then((data) => {
+                  return this.#getUser(data, isAll, fields);
+            })
+            .catch(err => console.error(err));
       }
 
       static getUserInfo(id) {
@@ -34,14 +42,18 @@ class userData {
             .catch(err => console.error(err));
       }
 
-      static save(userInfo) {
-            // const users = this.#users;
+      static async save(userInfo) {
+            const users = await this.getUser(true);
+            if(users.id.includes(userInfo.id)) {
+                  throw '이미 존재하는 회원입니다.';
+            } 
             users.name.push(userInfo.name);
             users.email.push(userInfo.email);
             users.phone.push(userInfo.phone);
             users.id.push(userInfo.id);
             users.pw.push(userInfo.pw);
-            return {success : true};
+            fs.writeFile('./src/database/users.json', JSON.stringify(users));
+            return {success : true, message : '성공적으로 회원가입되었습니다!'};
       }
 }
 
