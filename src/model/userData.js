@@ -1,17 +1,22 @@
-class userData {
-      // 외부에서 확인 및 출력하지 못하도록 은닉화해주기 : #변수명 
-      static #users = {
-            name : ['홍길동', '은박지', '오징어'],
-            email :  ['test01@gmail.com', 'test02@naver.com', 'test03@hanmail.com'],
-            phone : ['01012345678', '0109836283', '024261066'],
-            id: ['test01', 'test02', 'test03'],
-            pw: ['1234', '5678', '9000']
-      };
+const fs = require('fs').promises;
 
-      // 데이터 보호를 위해 은닉화 작업 후, 
+class userData {
+      // 데이터 보호를 위해 은닉화 권장
+      // 최상단에 위치하는 것이 좋음
+      static #getUserInfo(data, id) {
+            const users = JSON.parse(data);
+            const idx = users.id.indexOf(id);
+            const usersKeys = Object.keys(users);
+            const userInfo = usersKeys.reduce((newUser, info) => {
+                  newUser[info] = users[info][idx];
+                  return newUser;
+            }, {});
+            return userInfo;
+      }
+
       // 새로운 메서드로 데이터를 넘겨줘야한다.
       static getUser(...fields){
-            const users = this.#users;
+            // const users = this.#users;
             const newUsers = fields.reduce((newUsers, field)=>{
                   if(users.hasOwnProperty(field)) {
                         newUsers[field] = users[field];
@@ -22,20 +27,15 @@ class userData {
       }
 
       static getUserInfo(id) {
-            const users = this.#users;
-            const idx = users.id.indexOf(id);
-            // #users의 key만 배열로 만듬
-            const usersKeys = Object.keys(users);
-            const userInfo = usersKeys.reduce((newUser, info) => {
-                  newUser[info] = users[info][idx];
-                  return newUser;
-            }, {});
-
-            return userInfo;
+            return fs.readFile('./src/database/users.json')
+            .then((data) => {
+                  return this.#getUserInfo(data, id);
+            })
+            .catch(err => console.error(err));
       }
 
       static save(userInfo) {
-            const users = this.#users;
+            // const users = this.#users;
             users.name.push(userInfo.name);
             users.email.push(userInfo.email);
             users.phone.push(userInfo.phone);

@@ -5,9 +5,9 @@ class User {
             this.body = body;
       }
 
-      login() {
+      async login() {
             const client = this.body;
-            const { id, pw } = userData.getUserInfo(client.id);
+            const {id, pw} = await userData.getUserInfo(client.id);
 
             if(id){
                   if (id === client.id && pw === client.pw) {

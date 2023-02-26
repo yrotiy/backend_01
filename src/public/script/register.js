@@ -1,5 +1,3 @@
-const userInputs = document.querySelectorAll('.register-contents input');
-
 const userName = document.getElementById('userName');
 const userEmail = document.getElementById('userEmail');
 const userPhone = document.getElementById('userPhone');
@@ -12,7 +10,6 @@ const registerBtn = document.getElementById('registerBtn');
 registerBtn.addEventListener('click', register);
 
 function register() {
-      
       const req = {
             name : userName.value,
             email : userEmail.value,
@@ -46,7 +43,6 @@ function register() {
       .catch((err) => {
             console.error('회원가입 중 에러가 발생했습니다.');
       })
-      
 }
 
 

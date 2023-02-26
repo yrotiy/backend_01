@@ -9,9 +9,9 @@ const login = (req, res) => {
       res.sendFile(path.join(__dirname, '..' , 'view','subdir','login.html'));
 }
 
-const processLogin = (req, res) => {
+const processLogin = async (req, res) => {
       const user = new User(req.body);
-      const response = user.login();
+      const response = await user.login();
       return res.json(response);
 }
 
