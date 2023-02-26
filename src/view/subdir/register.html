@@ -7,86 +7,87 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>회원가입</title>
       <link rel="stylesheet" href="/style/reset.css">
-      <link rel="stylesheet" href="/style/register.css">
+      <!-- <link rel="stylesheet" href="/style/register.css"> -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+      <style>
+            .register-contents > div {
+                  width: 400px;
+                  margin: 15px;
+                  padding: 15px;
+                  border: 1px solid black;
+            }
+
+            button {
+                  margin: 15px;
+                  padding: 15px;
+            }
+
+            input {
+                  margin-left: 10px;
+                  padding: 8px;
+                  width: 200px;
+            }
+      </style>
 </head>
 
 <body>
-      <div class="wrapper">
-            <section id="register">
-                  <div class="register-title">
-                        <p>회원가입</p>
-                        <p>써브웨이 회원가입 하고 다양한 혜택을 누리세요!</p>
+      <div class="register-container">
+            <div class="register-contents">
+                  <div>
+                        <form action="" class="userName-form">
+                              <label for="userName">이름</label>
+                              <input type="text" id="userName" placeholder="이름 입력" required autocomplete="off">
+                        </form>
+                        <!-- <p class="userErr userName-err">2글자 이상 문자로 입력하세요.</p> -->
                   </div>
-                  <div class="register-step">
-                        <div></div>
-                        <span class="material-symbols-sharp">more_horiz</span>
-                        <div></div>
+                  <div>
+                        <form action="" class="userEmail-form">
+                              <label for="userEmail">이메일</label>
+                              <input class="beforCheckInput" type="text" id="userEmail" placeholder="이메일 입력" required autocomplete="off">
+                        </form>
+                        <!-- <p class="userErr userEmail-err">올바른 이메일 주소가 아닙니다.</p>
+                        <p class="userAlert userEmail-alert">먼저 이름을 입력하세요.</p> -->
                   </div>
-                  <div class="registerForm">
-                        <span class="registerFormTxt">
-                              <strong>STEP 1.</strong>
-                              <p>회원정보 입력하기</p>
-                        </span>
-                        <div class="register-wrapper">
-                              <div class="register-container">
-                                    <div class="register-contents">
-                                          <div>
-                                                <form action="" class="userName-form">
-                                                      <label for="userName">이름</label>
-                                                      <input type="text" id="userName" placeholder="이름 입력" required autocomplete="off">
-                                                </form>
-                                                <p class="userErr userName-err">2글자 이상 문자로 입력하세요.</p>
-                                          </div>
-                                          <div>
-                                                <form action="" class="userEmail-form">
-                                                      <label for="userEmail">이메일</label>
-                                                      <input class="beforCheckInput" type="text" id="userEmail" placeholder="이메일 입력" required autocomplete="off">
-                                                </form>
-                                                <p class="userErr userEmail-err">올바른 이메일 주소가 아닙니다.</p>
-                                                <p class="userAlert userEmail-alert">먼저 이름을 입력하세요.</p>
-                                          </div>
-                                          <div>
-                                                <form action="" class="userPhone-form">
-                                                      <label for="userPhone">전화번호</label>
-                                                      <input class="beforCheckInput" type="tel" id="userPhone" placeholder="전화번호 입력" required autocomplete="off">
-                                                </form>
-                                                <p class="userErr userPhone-err">유효한 전화번호를 입력하세요.</p>
-                                                <p class="userAlert userPhone-alert">먼저 이메일을 입력하세요.</p>
-                                          </div>
-                                          <div>
-                                                <form action="" class="userId-form">
-                                                      <label for="userId">아이디</label>
-                                                      <input class="beforCheckInput" type="text" id="userId" placeholder="아이디 입력" required autocomplete="off">
-                                                </form>
-                                                <p class="userErr userId-err">5글자 이상 영문자로 입력하세요.</p>
-                                                <p class="userAlert userId-alert">먼저 전화번호를 입력하세요.</p>
-                                          </div>
-                                          <div>
-                                                <form action="" class="userPw-form">
-                                                      <label for="userPw">비밀번호</label>
-                                                      <input class="beforCheckInput" type="password" id="userPw" placeholder="비밀번호 입력 (영문자,숫자,특수문자를 포함한 8자리 이상)" required autocomplete="off">
-                                                      <span class="material-symbols-sharp show-pw"></span>
-                                                </form>
-                                                <p class="userErr userPw-err">조건에 충족하지 않는 비밀번호입니다.<br>다시 입력하세요.</p>
-                                                <p class="userAlert userPw-alert">먼저 아이디를 설정하세요.</p>
-                                          </div>
-                                          <div>
-                                                <form action="" class="userPwCheck-form">
-                                                      <label for="userPwCheck">비밀번호 확인</label>
-                                                      <input class="beforCheckInput" type="password" id="userPwCheck" placeholder="비밀번호 확인" required autocomplete="off">
-                                                      <span class="material-symbols-sharp show-pw"></span>
-                                                </form>
-                                                <p class="userErr userPwCheck-err">이전에 입력한 비밀번호 같지 않습니다.</p>
-                                                <p class="userAlert userPwCheck-alert">먼저 비밀번호를 설정하세요</p>
-                                          </div>
-                                    </div>
-                                    <button id="registerBtn">회원가입</button>
-                              </div>
-                        </div>
+                  <div>
+                        <form action="" class="userPhone-form">
+                              <label for="userPhone">전화번호</label>
+                              <input class="beforCheckInput" type="tel" id="userPhone" placeholder="전화번호 입력" required autocomplete="off">
+                        </form>
+                        <!-- <p class="userErr userPhone-err">유효한 전화번호를 입력하세요.</p>
+                        <p class="userAlert userPhone-alert">먼저 이메일을 입력하세요.</p> -->
                   </div>
-            </section>
+                  <div>
+                        <form action="" class="userId-form">
+                              <label for="userId">아이디</label>
+                              <input class="beforCheckInput" type="text" id="userId" placeholder="아이디 입력" required autocomplete="off">
+                        </form>
+                        <!-- <p class="userErr userId-err">5글자 이상 영문자로 입력하세요.</p>
+                        <p class="userAlert userId-alert">먼저 전화번호를 입력하세요.</p> -->
+                  </div>
+                  <div>
+                        <form action="" class="userPw-form">
+                              <label for="userPw">비밀번호</label>
+                              <input class="beforCheckInput" type="password" id="userPw" placeholder="비밀번호 입력 (영문자,숫자,특수문자를 포함한 8자리 이상)" required autocomplete="off">
+                              <span class="material-symbols-sharp show-pw"></span>
+                        </form>
+                        <!-- <p class="userErr userPw-err">조건에 충족하지 않는 비밀번호입니다.<br>다시 입력하세요.</p>
+                        <p class="userAlert userPw-alert">먼저 아이디를 설정하세요.</p> -->
+                  </div>
+                  <div>
+                        <form action="" class="userPwCheck-form">
+                              <label for="userPwCheck">비밀번호 확인</label>
+                              <input class="beforCheckInput" type="password" id="userPwCheck" placeholder="비밀번호 확인" required autocomplete="off">
+                              <span class="material-symbols-sharp show-pw"></span>
+                        </form>
+                        <!-- <p class="userErr userPwCheck-err">이전에 입력한 비밀번호 같지 않습니다.</p>
+                        <p class="userAlert userPwCheck-alert">먼저 비밀번호를 설정하세요</p> -->
+                  </div>
+            </div>
+            <button id="registerBtn">회원가입</button>
+
+            <a href="/login">로그인</a>
       </div>
+
       <script src="/script/jquery-3.6.1.js"></script>
       <script src="/script/jquery-ui.js"></script>
       <script src="/script/register.js"></script>
